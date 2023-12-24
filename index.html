@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Greeting</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Link to the Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap">
+</head>
+<body>
+  <div class="container">
+    <div class="animation">
+        <!-- <img src="kuromi.gif" alt="Animated Kuromi"> -->
+        <img src="flower.gif" alt="Animated Flower" id="playButton" onclick="playAudio()" class="glow-on-hover">
+    </div>
+    <div class="content">
+        <!-- Text with Sparkling Effect -->
+        <h1 class="sparkle-text" style="font-family: 'Quicksand', sans-serif;">2nd Christmas Together</h1>
+        <p id="message" style="font-family: 'Quicksand', sans-serif;">Dear [Your Girlfriend's Name],</p>
+
+        <div class="kuromi-overlay">
+            <img src="kuromi_peeking.png" alt="Kuromi Peeking" class="kuromi-peek">
+        </div>
+        <div class="kuromi-fly-overlay">
+            <img src="kuromi flying.gif" alt="Melody Icon" class="kuromi-fly-image" loop>
+          </div>
+          <div class="melody-lay-overlay">
+            <img src="melody-laying.gif" alt="Melody Icon" class="melody-lay-image" loop>
+          </div>
+
+          <div class="melody-peek-overlay">
+            <img src="melody-peeking.png" alt="Melody Icon" class="melody-peek-image" loop>
+          </div>
+      
+        <div class="button-container">
+            <button onclick="previousMessage()" class="circle-button">&#9664;</button>
+            <img src="kuromi_skull.png" alt="Kuromi Skull" class="kuromi-skull">
+            <button onclick="nextMessage()" class="circle-button">&#9654;</button>
+        </div>
+
+        <div id="snowfall"></div>
+        <audio id="backgroundAudio" loop>
+            <source src="background_music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .animation img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px;
+    animation: floatAnimation 2s infinite ease-in-out alternate;
+  }
+  
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .content {
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+
+/* Button Styling */
+.custom-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff80c0; /* Custom background color */
+    color: #1a1a1a; /* Text color */
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Make the text bold */
+    /* Add cute text styling */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .custom-button:hover {
+    background-color: #ff99cc; /* Lighter color on hover */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .circle-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff80c0;
+    color: #1a1a1a;
+    font-size: 22px;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Adjust spacing between buttons and image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1; /* Ensure the content is centered vertically */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.464); /* Add a subtle shadow */
+  }
+  
+  .circle-button:hover {
+    background-color: #ff99cc;
+  }
+  
+  .kuromi-skull {
+    width: 40px; /* Set the width to match the button's width */
+    height: 40px; /* Set the height to match the button's height */
+    vertical-align: middle; /* Align the image vertically in the middle */
+  }
+  
+  .circle-button::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  /* Style left and right arrow buttons */
+  .circle-button:nth-child(1) {
+    padding-top: 3px;
+    padding-right: 3px; /* Adjust position for left arrow */
+  }
+  .circle-button:nth-child(2) {
+    padding-left: 3px; /* Adjust position for right arrow */
+  }
+  
+  
+  /* Sparkling Text Animation */
+@keyframes sparkle-animation {
+    0% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff80c0, 0 0 30px #ff80c0, 0 0 40px #ff80c0, 0 0 55px #ff80c0, 0 0 75px #ff80c0;
+    }
+    50% {
+      text-shadow: none;
+    }
+    100% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff80c0, 0 0 30px #ff80c0, 0 0 40px #ff80c0, 0 0 55px #ff80c0, 0 0 75px #ff80c0;
+    }
+  }
+  
+  /* Apply the Sparkling Animation to Text */
+  .sparkle-text {
+    animation: sparkle-animation 4s linear infinite;
+  }
+
+  .kuromi-skull {
+    vertical-align: middle; /* Align the image vertically in the middle */
+    width: 50px; /* Set the width to match the button's width */
+    height: 50px; /* Set the height to match the button's height */
+  }
+  
+  .kuromi-overlay {
+    position: fixed;
+    top: 20px;
+    right: 0px;
+    z-index: 999; /* Ensure it appears above other content */
+  }
+  
+  .kuromi-peek {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    /* opacity: 0.8; Adjust the overlay opacity */
+  }
+
+  .kuromi-fly-overlay {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    z-index: 999; /* Ensure it appears above other content */
+    animation: flyKuromi 4s ease-in-out infinite alternate;
+  }
+  
+  .kuromi-fly-image {
+    width: 370px; /* Adjust the width of the melody icon */
+    height: auto; /* Maintain aspect ratio */
+    /* opacity: 0.8; Adjust the overlay opacity */
+  }
+
+  @keyframes flyKuromi {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px); /* Adjust the flying distance */
+    }
+  }
+
+  .melody-lay-overlay {
+    position: fixed;
+    bottom: 0;
+    left: 0px;
+    z-index: 999;
+  }
+  
+  .melody-lay-image {
+    width: 340px; /* Adjust the width of the melody icon */
+    height: auto; /* Maintain aspect ratio */
+    /* opacity: 0.8; Adjust the overlay opacity */
+  }
+
+  .melody-peek-overlay {
+    position: fixed;
+    top: 20px;
+    left: -20px;
+    z-index: 999;
+  }
+  
+  .melody-peek-image {
+    width: 260px; /* Adjust the width of the melody icon */
+    height: auto; /* Maintain aspect ratio */
+    /* opacity: 0.8; Adjust the overlay opacity */
+  }
+
+  
+  #snowfall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Make snowfall ignore mouse events */
+  }
+  
+  .snowflake {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none; /* Make snowflakes ignore mouse events */
+    animation: snowfall 30s linear infinite;
+  }
+  
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-10vh) rotate(0deg); /* Start higher up */
+    }
+    100% {
+      transform: translateY(110vh) rotate(360deg); /* End lower down */
+    }
+  }
+
+  /* Add this CSS to create the glowing effect on hover and change cursor */
+.glow-on-hover {
+    /* Your existing styles for the image */
+    /* ... */
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer; /* Set cursor to pointer for the image */
+  }
+  
+  .glow-on-hover:hover {
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  
+  
+  
